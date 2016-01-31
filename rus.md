@@ -1,32 +1,29 @@
-# JavaScript goes to Asynchronous city
+# Путешествие JavaScript в город асинхронности
 
-JavaScript has come a long way since its early versions and thanks to all
-efforts done by[TC39][1] (The organization in charge of standardizing
-JavaScript (or**ECMAScript** to be exact)) we now have a modern language that
-is used widely.
+Благодаря усилиям TC39 (организации, ответственной за стандартизацию JavaScript
+(ECMAScript, если быть точным)) JavaScript прошёл достаточно длинный путь со
+своих первых версий и стал современным, широко используемым языком.
 
-One area within **ECMAScript** that received vast improvements is **
-asynchronous code**. You can learn more about
-[asynchronous programming here][2] if you’re a new developer. Fortunately we
-’ve included these changes in Windows 10’s new Edge browser. Check out the
-change log below:
+Одна из частей стандарта ECMAScript, получившая огромное количество улучшений —
+асинхронность ([что такое асинхронное программирование?][0]). Кстати, в новом
+браузере Edge из Windows 10 мы добавили поддержку современных возможностей для
+работы с асинхронным кодом. Можете посмотреть полный список нововведений:
 
 [https://dev.modern.ie/platform/changelog/desktop/10547/?compareWith=10532][3]
 
-Among all these new features, let’s specifically focus on “ES2016 **Async
-Functions**”** **behind the **Experimental Javascript** features flag and take
-a journey through the updates and see how ECMAScript can improve your currently
-workflow.
+Список довольно длинный, но в этой статье мы сфокусируемся на асинхронных
+функциях (ES2016 Async Functions) и рассмотрим их подробно, а также поймём, как
+они могут улучшить ваш код.
 
-## First stop: ECMAScript 5 – Callbacks city
+## Первая остановка: ECMAScript 5 – город коллбеков
 
-**ECMAScript 5** (and previous versions as well) are all about callbacks. To
-better picture this, let’s have a simple example that you certainly use more
-than once a day: executing a XHR request.
+Вся работа с асинхронностью в ECMAScript 5 (и предыдущих версиях) сводилась
+к коллбекам. Проиллюстрирую это простой задачей, с которой вы, вероятно,
+сталкиваетесь довольно часто: выполнение XHR-запроса.
 
     var displayDiv = document.getElementById("displayDiv");
 
-    // Part 1 - Defining what do we want to do with the result
+    // Объявляем функцию для обработки результата
     var processJSON = function (json) {
         var result = JSON.parse(json);
 
@@ -38,17 +35,17 @@ than once a day: executing a XHR request.
         });
     }
 
-    // Part 2 - Providing a function to display errors
+    // Объявляем функцию для отображения ошибок
     var displayError = function(error) {
         displayDiv.innerHTML = error;
     }
 
-    // Part 3 - Creating and setting up the XHR object
+    // Создаём и настраиваем XHR-объект
     var xhr = new XMLHttpRequest();
 
     xhr.open('GET', "cards.json");
 
-    // Part 4 - Defining callbacks that XHR object will call for us
+    // Объявляем коллбеки, которые будут вызваны XHR-объектом
     xhr.onload = function(){
         if (xhr.status === 200) {
             processJSON(xhr.response);
@@ -56,19 +53,17 @@ than once a day: executing a XHR request.
     }
 
     xhr.onerror = function() {
-        displayError("Unable to load RSS");
+        displayError("Не получилось загрузить RSS");
     }
 
-    // Part 5 - Starting the process
+    // Отправляем запрос
     xhr.send();
 
-Established JavaScript developers will note how familiar this looks since XHR
-callbacks are used all the time! It’s simple and fairly straight forward: the
-developer creates an XHR request and then provides the callback for the
-specified XHR object.
+Опытным JavaScript-разработчикам знаком подобный код, потому что XHR-коллбеки
+используются повсеместно. Принцип довольно прост: разработчик создаёт
+XHR-запрос, а затем задаёт коллбек нужному XHR-объекту.
 
-In contrast, callback complexity comes from the execution order which is not
-linear due to the inner nature of asynchronous code:
+С другой стороны, коллбеки трудны для понимания из-за внутренней природы асинхронного кода:
 
 ![image][4]
 
