@@ -67,26 +67,19 @@ XHR-запрос, а затем задаёт коллбек нужному XHR-�
 
 ![image][4]
 
-The “[callbacks hell][5]” can even be worse when using another asynchronous
-call inside of your own callback.
+Всё станет ещё сложнее, если внутри коллбека создать ещё один асинхронный запрос — вы столкнётесь с так называемым «[адом коллбеков][5]».
 
-## Second stop: ECMAScript 6 – Promises city
+## Вторая остановка: ECMAScript 6 – Город промисов
 
-**ECMAScript 6** is gaining momentum and Edge is [has leading support][6] with
-88% coverage so far.
+ECMAScript 6 набирает обороты, и Edge на данный момент [лидирует среди браузеров][6] с
+88% поддержкой возможностей нового стандарта.
 
-Among a lot of great improvements, **ECMAScript 6** standardizes the usage of*
-promises* (formerly known as futures).
+Помимо прочих прекрасных улучшений, в ECMAScript 6 стандартизировали использование *промисов* (ранее известных как *futures*).
 
-According to [MDN][7], a *promise* is an object which is used for deferred and
-asynchronous computations. A*promise* represents an operation that hasn’t
-completed yet, but is expected in the future. Promises are a way of organizing
-asynchronous operations in such a way that they appear synchronous. Exactly what
-we need for our XHR example.
+Согласно определению с [MDN][7], промис — это объект, используемый для отложенных и асинхронных вычислений. Промис представляет операцию, которая ещё не была завершена, но её завершение ожидается в будущем. Промисы позволяют организовать выполнение асинхронных операций так, будто эти операции синхронны. Как раз то что нужно для нашего примера с XHR-запросом.
 
-> *Promises* have been around for a while but the good news is that now you don
-> ’t need any library anymore as they are provided by the browser.
->
+> Промисы существовали ещё до появления стандарта ES6, но теперь вам не придётся
+> использовать сторонние библиотеки — промисы встроены в современные браузеры.
 
 Let’s update our example a bit to support *promises* and see how it could
 improve the readability and maintainability of our code:
