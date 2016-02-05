@@ -146,28 +146,24 @@ ECMAScript 6 набирает обороты, и Edge на данный моме
 
 ![image][8]
 
-### Using the promise
+### Использование промиса
 
-Once created, the *promise* can be used to chain asynchronous calls in a more
-elegant way:
+После создания промиса можно строить элегантные цепочки асинхронных вызовов:
 
 ![image][9]
 
-So now we have (from the user standpoint):
+Таким образом код (с точки зрения пользователя) выглядит так:
 
-*   Get the promise **(1)**
-*   Chain with the success code **(2 and 3)**
-*   Chain with the error code **(4)** like in a try/catch block
+*   Получаем промис **(1)**
+*   Начинаем цепочку с обработки успешного завершения операции **(2 and 3)**
+*   Заканчиваем цепочку обработкой ошибки **(4)** (аналогично try/catch)
 
-What’s interesting is that chaining *promises* are easily called using *.then
-().then
-(),* etc.
+Что действительно интересно — можно запросто создавать цепочки промисов,
+вызывая `.then().then()` и так далее.
 
-> **Side node:** *Since JavaScript is a modern language, you may notice that I
-> ’ve also used
->*[*syntax sugar*][10]* from **ECMAScript 6** like *[*template strings*][11]*
-> or
->*[*arrow functions*][12]*.*
+*Примечание: вы могли заметить, что помимо промисов я использовал также
+некоторый [синтаксический сахар][10] из ECMAScript 6 вроде
+[строковых шаблонов][11] или [стрелочных функций][12].*
 
 ## Terminus: ECMAScript 7 – Asynchronous city
 
