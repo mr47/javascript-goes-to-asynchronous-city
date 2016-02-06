@@ -165,14 +165,11 @@ ECMAScript 6 набирает обороты, и Edge на данный моме
 некоторый [синтаксический сахар][10] из ECMAScript 6 вроде
 [строковых шаблонов][11] или [стрелочных функций][12].*
 
-## Terminus: ECMAScript 7 – Asynchronous city
+## Конечная: ECMAScript 7 — город асинхронности
 
-Finally, we’ve reached our destination! We are almost in the [future][13], but
-thanks to Edge’s rapid development cycle, the team is able to introduce a bit of
-**ECMAScript 7** with **async functions** in the latest build!
+Итак, мы достигли точки назначения! Мы практически в [будущем][13], но благодаря команде разработчиков браузера Edge в одной из его последних сборок появилась поддержка асинхронных функций!
 
-Async functions are a syntax sugar to improve the language-level model for
-writing asynchronous code.
+Асинхронные функции — это синтаксический сахар, на уровне языка улучшающий работу с асинхронным кодом.
 
 > Async functions are built on top of ECMAScript 6 features like generators.
 > Indeed, generators can be used jointly with promises to produce the same results
