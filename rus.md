@@ -169,22 +169,23 @@ ECMAScript 6 набирает обороты, и Edge на данный моме
 
 Итак, мы достигли точки назначения! Мы практически в [будущем][13], но благодаря команде разработчиков браузера Edge в одной из его последних сборок появилась поддержка асинхронных функций!
 
-Асинхронные функции — это синтаксический сахар, на уровне языка улучшающий работу с асинхронным кодом.
+Асинхронные функции — это синтаксический сахар, на уровне языка улучшающий
+работу с асинхронным кодом.
 
-> Async functions are built on top of ECMAScript 6 features like generators.
-> Indeed, generators can be used jointly with promises to produce the same results
-> but with much more user code
->
+> В основе асинхронных функций лежат современные возможности ECMAScript 6 вроде
+> генераторов. На самом деле генераторы вместе с промисами позволяют
+> сымитировать поведение асинхронных функций, но для потребуется написать
+> намного больше кода.
 
-We do not need to change the function which generates the promise as async
-functions work directly with promise.
+Нам не требуется изменять функцию, генерирующую промис, потому что асинхронные
+функции работают напрямую с промисами.
 
-We only need to change the calling function:
+Нам нужно лишь изменить вызов функции:
 
-    // Let's create an async anonymous function
+    // Создаём анонимную асинхронную функцию
     (async function() {
         try {
-            // Just have to await the promise!
+            // Просто дожидаемся результата из промиса
             var json = await getJsonAsync("cards.json");
             var result = JSON.parse(json);
 
@@ -199,8 +200,8 @@ We only need to change the calling function:
         }
     })();
 
-This is where magic happens. This code looks like a regular synchronous code
-with a perfectly linear execution path:
+Вот где начинается магия. Этот код написан в синхронном стиле с прямым порядком
+выполнения:
 
 ![image][14]
 
