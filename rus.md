@@ -205,35 +205,22 @@ ECMAScript 6 набирает обороты, и Edge на данный моме
 
 ![image][14]
 
-Quite impressive, right?
+Впечатляет, не так ли?
 
+И да, вы можее использовать асинхронные функции вместе со стрелочными функциями или методами классов.
 And the good news is that you can even use async functions with arrow functions
-or class methods.
 
-##
+## Двигаемся дальше
 
-## Going further
+Если вам интересно узнать, как мы реализовали поддержку асинхронных функций в движке Chakra, то прочитайте [анонс][15] в официальном блоке Edge.
 
-If you want more detail on how we implemented it in Chakra, please check the
-official post on Edge blog:
-[http://blogs.windows.com/msedgedev/2015/09/30/asynchronous-code-gets-easier-with-es2016-async-function-support-in-chakra-and-microsoft-edge/][15]
+Вы также можете отслеживать поддержку браузерами новых возможностей ECMAScript 6 и 7 на сайте [Kangax][6]. Ну и не стесняйтесь проверять наш [план][16] по реализации новых возможностей в браузере Edge!
 
-You can also track the progress of various browsers implementation of **
-ECMAScript 6** and **7** using [Kangax’s website][6]: Feel free also to check
-[our JavaScript roadmap][16] as well!
-
-Please, do not hesitate to give us your feedback and support your favorite
-features by using the vote button:
+Не стесняйтесь давать нам обратную связь и голосовать за те возможности, которые вы в первую очередь хотите увидеть в браузере Edge:
 
 ![image][17]
 
-Thanks for reading and we’re eager to hear your feedback and ideas!
-
-**David Catuhe**
-
-Principal Program Manager
-
-[@deltakosh][18]
+Спасибо за чтение! Будем рады услышать ваши отзывы и идеи.
 
  [1]: http://www.ecma-international.org/memento/TC39-M.htm
  [2]: https://msdn.microsoft.com/en-us/library/hh191443.aspx
