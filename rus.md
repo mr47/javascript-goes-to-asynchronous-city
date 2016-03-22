@@ -230,7 +230,9 @@ ECMAScript 6 и 7 на сайте [Kangax][6]. Ну и не стесняйтес
 Не стесняйтесь давать нам обратную связь и голосовать за те возможности,
 которые вы в первую очередь хотите увидеть в браузере Edge:
 
-![Скриншот][Голоса, отданные за имплементацию модулей ES6]
+##Замечание от редакции
+
+>Так как название стандарта ES6 как и ES7 было изменено по решению [TC39][19] на ES2015 и ES2016 соответственно. И так стандарт ES2016 находится в [финальной стадии][20]. Под ES7 подразумевается ES2017 или будущая версия стандарта в которую войдут async/await. В рекомендации попадают предложения в [4 стадии][21]. Async/await пока находятся в стадии 3 и в финальную версию спецификации ES2017 могут и не попасть. Подробнее о стадиях вы можете прочитать [здесь][22]. Так же можете ознакомиться с именованиями и часто задаваемыми вопросами связанными со стадиями и [комитетом ТС39][19] - [здесь][23]. 
 
 Спасибо за внимание! Будем рады услышать ваши отзывы и идеи.
 
@@ -252,6 +254,11 @@ ECMAScript 6 и 7 на сайте [Kangax][6]. Ну и не стесняйтес
  [15]: http://blogs.windows.com/msedgedev/2015/09/30/asynchronous-code-gets-easier-with-es2016-async-function-support-in-chakra-and-microsoft-edge/ "http://blogs.windows.com/msedgedev/2015/09/30/asynchronous-code-gets-easier-with-es2016-async-function-support-in-chakra-and-microsoft-edge/"
  [16]: https://dev.modern.ie/platform/status/javascript/
  [18]: http://www.twitter.com/deltakosh
+ [19]: https://tc39.github.io/ecma262/
+ [20]: http://www.2ality.com/2016/01/ecmascript-2016.html
+ [21]: https://github.com/tc39/ecma262
+ [22]: https://tc39.github.io/process-document/
+ [23]: http://www.2ality.com/2015/11/tc39-process.html
  
  [Порядок выполнения коллбеков]: img/8816.image_5F00_thumb_5F00_35C48EA5.png "Порядок выполнения коллбеков"
  [Ключевые моменты в использовании промисов]: img/6305.image_5F00_thumb_5F00_56493DA6.png "Ключевые моменты в использовании промисов"
